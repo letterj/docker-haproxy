@@ -1,0 +1,7 @@
+FROM haproxy:1.7
+
+COPY jayproxy.cfg /usr/local/etc/haproxy/jayproxy.cfg
+
+RUN cat /usr/local/etc/haproxy/jayproxy.cfg >> /usr/local/etc/haproxy/haproxy.cfg
+
+EXPOSE <port>
